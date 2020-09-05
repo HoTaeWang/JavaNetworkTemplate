@@ -3,12 +3,13 @@
  */
 package com.yunsoft;
 
+import com.yunsoft.netutil.*;
+
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        NetworkUtil netUtil = new NetworkUtil();
+        System.out.println("www.google.co.uk = " + netUtil.getInetAddress("www.google.co.uk"));
+
     }
 }
