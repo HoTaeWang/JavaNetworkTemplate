@@ -5,6 +5,7 @@ package com.yunsoft;
 
 import com.yunsoft.netutil.*;
 
+import java.net.NetworkInterface;
 import java.net.SocketException;
 
 public class App {
@@ -17,6 +18,11 @@ public class App {
 
         InterfaceLister interfaceLister = new InterfaceLister();
         interfaceLister.displayInterfaces();
+        NetworkInterface ni = interfaceLister.getInterfaceByName("eth0");
+        if(null == ni){
+            System.err.println("No such interface: eth0");
+        }
+        
 
     }
 }
