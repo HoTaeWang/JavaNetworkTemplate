@@ -5,12 +5,18 @@ package com.yunsoft;
 
 import com.yunsoft.netutil.*;
 
+import java.net.SocketException;
+
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SocketException {
         NetworkUtil netUtil = new NetworkUtil();
         System.out.println("www.google.co.uk = " + netUtil.getInetAddress("www.google.co.uk"));
         netUtil.DisplayNetAddress("www.google.co.uk");
         netUtil.getMyAddress();
+
+        InterfaceLister interfaceLister = new InterfaceLister();
+        interfaceLister.displayInterfaces();
+
     }
 }
