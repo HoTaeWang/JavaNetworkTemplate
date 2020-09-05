@@ -10,6 +10,7 @@ public class App {
     public static void main(String[] args) {
         NetworkUtil netUtil = new NetworkUtil();
         System.out.println("www.google.co.uk = " + netUtil.getInetAddress("www.google.co.uk"));
-
+        netUtil.DisplayNetAddress("www.google.co.uk");
+        netUtil.getMyAddress();
     }
 }
